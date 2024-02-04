@@ -1,6 +1,26 @@
 # Text Models
 
-This repository contains scripts and models compatible with the `text` R-package. Each model type has its own directory. For adding new model types, please create a corresponding directory and fill in this README-file.
+This repository contains scripts and models compatible with the `text` R-package. Each model type has its own directory. For adding new model types, please create a corresponding directory, consider adding the model-recipe in the `recipes` folder, and fill in this README-file.
+
+## Tutorial
+To use your models, follow the following general procedure: 
+```R
+#
+library(text)
+textPredict( 
+    model_info = "url/to/your/model" 
+    texts = "texts to predict" 
+)
+```
+### Example
+Predict valence using the facebook pretrained model. 
+```R
+predictions <- textPredict(
+  model_info = "https://github.com/OscarKjell/text_models/raw/main/valence_models/facebook_model.rds",
+  texts = Language_based_assessment_data_8$harmonytexts,
+  dim_names = FALSE  # For this particular model, dim_names should be set to FALSE (see Guide, Valence Models).
+)
+```
 
 ## Model Directories
 
