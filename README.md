@@ -3,17 +3,16 @@
 This repository contains scripts and models compatible with the `text` R-package. Each model type has its own directory. For adding new model types, please create a corresponding directory, consider adding the model-recipe in the `recipes` folder, and fill in this README-file.
 
 ## Tutorial
-To use your models, follow the following general procedure: 
+To use the pretrained models for prediction, follow the following general procedure: 
 ```R
-#
 library(text)
 textPredict( 
-    model_info = "url/to/your/model" 
+    model_info = "url/to/your/model",
     texts = "texts to predict" 
 )
 ```
 ### Example
-Predict valence using the facebook pretrained model. 
+Predict valence using the facebook pretrained model:
 ```R
 predictions <- textPredict(
   model_info = "https://github.com/OscarKjell/text_models/raw/main/valence_models/facebook_model.rds",
