@@ -30,3 +30,11 @@ predictions <- textPredict(
 - `facebook_model_reduced.rds`
   - Source: Facebook data from 2442 posts with valence ratings by psychology professionals, based on Preoţiuc-Pietro et al. (2016).   Principal Component Analysis (PCA) using 20 components has been applied to the embeddings. 
   - Guide: Set dim_names to FALSE. 
+
+### Implicit Motive Models
+- `schone_training_rob_la_l23_to_achievement_10k.rds`
+  - Guide: See implicit motive section in help(textPredict).
+- `schone_training_rob_la_l23_to_power_10k.rds`
+  - Guide: See implicit motive section in help(textPredict).
+- `schone_training_rob_la_l23_to_affiliation_10k.rds`
+  - Guide: See implicit motive section in help(textPredict).
